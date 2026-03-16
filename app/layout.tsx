@@ -1,0 +1,39 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Վերջին զանգ",
+  description: "Վերջին զանգ",
+  openGraph: {
+    title: "Վերջին զանգի հրավիրատոմս",
+    description: "Ամեն ավարտ մի նոր սկիզբ է․․․",
+    url: "https://verjin-zang-3.vercel.app/",
+    siteName: "Վերջին զանգ",
+    images: [
+      {
+        url: "/img1.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className=" bg-[#ECEFFC]"
+        style={{ whiteSpace: "pre-line" }}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}

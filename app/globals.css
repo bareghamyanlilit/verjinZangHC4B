@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family:"ArmAllegroU" ;
+  src: url('/font/ArmAllegroU.woff2');
+}
+
+@font-face {
+  font-family:"SHK_Dzeragir" ;
+  src: url('/font/SHK_Dzeragir.woff2');
+}
+
+.FontArmAllegroU{
+  font-family: "ArmAllegroU";
+}
+
+.FontSHK_Dzeragir{
+  font-family: "SHK_Dzeragir";
+  
+}
+
+@media (min-width: 768px) {
+  @keyframes bounceY {
+    0% {
+      transform: translateY(0);
+      width: 560px;
+      height: 360px;
+      z-index: 6;
+    }
+    50% {
+      transform: translateY(-500px);
+      z-index: 6;
+    }
+    100% {
+      width: 560px;
+      height: 360px;
+      z-index: 50;
+    }
+  }
+
+  .animate-bounceY {
+    animation: bounceY 2s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes bounceY {
+    0% {
+      transform: translateY(0);
+      width: 280px;
+      height: 180px;
+      z-index: 6;
+    }
+    50% {
+      transform: translateY(-200px);
+      z-index: 6;
+    }
+    100% {
+      width: 280px;
+      height: 180px;
+      z-index: 50;
+    }
+  }
+
+  .animate-bounceY {
+    animation: bounceY 2s ease;
+  }
+}
