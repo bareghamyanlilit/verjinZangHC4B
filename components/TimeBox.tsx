@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {motion} from "framer-motion"
 
 
-const weddingDate: any = new Date("2026-03-20T12:00:00");
+const weddingDate: any = new Date("2026-03-20T11:00:00");
 
 export function TimeBox() {
   const [timeLeft, setTimeLeft] = useState({

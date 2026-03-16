@@ -35,7 +35,7 @@ export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
                   alt="icon1"
                   width={500}
                   height={500}
-                  className="w-8 absolute -right-4 -top-2 rotate-22"
+                  className="w-8 absolute -right-3 -top-2 rotate-22"
                 />
               )}
               <p>{day}</p>

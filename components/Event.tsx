@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TimeBox } from "./TimeBox";
 import { Calendar } from "./Calendar";
 import { Program } from "./Program";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MusicPlayer } from "./music";
 import { FaMusic } from "react-icons/fa";
 import { anim, txt1, txt2, txt3 } from "@/data/data";
@@ -12,8 +12,10 @@ import { motion } from "framer-motion";
 import { Footer } from "./footer";
 
 export function Event({ openEnvelope }: any) {
-  let [isPlaying, setIsPlaying] = useState(false);
-  isPlaying = openEnvelope == true ? true : false;
+  let [isPlaying, setIsPlaying] = useState(true);
+  useEffect(() => {
+    setIsPlaying(!isPlaying);
+  }, [openEnvelope]);
   return (
     <div className={`${openEnvelope ? "block" : "hidden"} m-auto max-w-md`}>
       {/* music button */}
@@ -129,7 +131,7 @@ export function Event({ openEnvelope }: any) {
           className="w-full my-7 rounded-3xl  "
         />
       </div>
-      <h2 className="FontSHK_Dzeragir text-center text-5xl">23 / 05 / 2026</h2>
+      <h2 className="FontSHK_Dzeragir text-center text-5xl">20 / 03 / 2026</h2>
       <Image
         src="/icon4.png"
         alt="icon1"
@@ -146,18 +148,101 @@ export function Event({ openEnvelope }: any) {
           className="w-4 object-cover "
         />
         <div className="FontSHK_Dzeragir pt-10 tracking-[.5%] pl-5 leading-6.25 text-2xl flex flex-col gap-9">
-          <p>12 տարի միասին</p>
-          <p>1 անփոփոխ ու սիրված դասարան</p>
-          <p>150 անգամ հնչած «դասից փախնելու» առաջարկ</p>
+          <p>4 տարի միասին</p>
+          <p>1 անփոփոխ ու սիրված կուրս</p>
+          <p>10-ից ավել անգամ հնչած «դասից փախնելու» առաջարկ</p>
           <p>
-            21,000 ժամ դպրոցական <br /> պատերի ներսում
+            3,000 ժամից ավելին քոլեջի <br /> պատերի ներսում
           </p>
         </div>
       </div>
       <p className="FontSHK_Dzeragir tracking-[1.5%] text-2xl text-center py-25 px-7">
         Հարգանքներով՝ <br />
-        2026 թ. շրջանավարտներ
+        2026 թ. ՀՏԱՀԾԱ 4 Բ <br />
+        շրջանավարտներ
       </p>
+      <div 
+        className=" h-auto bg-contain bg-repeat py-10"
+        style={{ backgroundImage: "url('/icon6.png')" }}>
+        <div className="px-3 ml-2 grayscale-100 -rotate-7 w-[60%]  mt-10">
+          <Image
+            src="/img7.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3 ml-35 grayscale-100   rotate-7  w-[60%] ">
+          <Image
+            src="/img8.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3 ml-2  grayscale-100   -rotate-7 w-[60%]  ">
+          <Image
+            src="/img9.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3 ml-35 grayscale-100  rotate-7 w-[60%] ">
+          <Image
+            src="/img10.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3  ml-2  grayscale-100   -rotate-7  w-[60%] ">
+          <Image
+            src="/img11.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3 ml-35  grayscale-100  rotate-7 w-[60%] ">
+          <Image
+            src="/img12.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+        <div className="px-3 ml-2  grayscale-100 -rotate-7 w-[60%]  ">
+          <Image
+            src="/img13.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+
+        <div className="px-3 ml-35 grayscale-100   rotate-7  w-[60%] mb-20">
+          <Image
+            src="/img14.jpg"
+            alt="icon1"
+            width={500}
+            height={500}
+            className="w-full my-3 rounded-3xl  "
+          />
+        </div>
+      </div>
       <Footer />
     </div>
   );
